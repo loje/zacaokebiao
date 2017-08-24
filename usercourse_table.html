@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>杂草课表</title>
+
+		<!-- Bootstrap -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link href="offcanvas/bootstrap.offcanvas.min.css" rel="stylesheet">
+
+		<link href="css/main.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-offcanvas" id="nav-offcanvas">
+			<div class="container-fluid">
+				<div class="meida user-sider">
+					<div class="media-left">
+						<div class="img" style="background-image: url(img/bg.jpg);"></div>
+					</div>
+					<div class="media-body">
+						<h5>鼠婆子</h5>
+						<p>281颗种子</p>
+					</div>
+				</div>
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="{:U('Shop/shoporder')}">
+							<i class="iconfont">&#xe609;</i> 以往订单
+						</a>
+					</li>
+					<li>
+						<a href="{:U('Shop/shop')}">
+							<i class="iconfont">&#xe604;</i> 黑店首页
+						</a>
+					</li>
+					<li role="separator" class="divider"></li>
+					<li>
+						<a href="{:U('SignUp/index?id='.$fuli['id'])}">
+							<i class="iconfont">&#xe61b;</i> 福利日
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<i class="iconfont">&#xe60a;</i> 课程表
+							<span class="label label-success">NEW</span>
+						</a>
+					</li>
+					<li>
+						<a href="user_record.html">
+							<i class="iconfont">&#xe60a;</i> 课程记录
+							<span class="label label-success">NEW</span>
+						</a>
+					</li>
+					<li role="separator" class="divider"></li>
+					<li>
+						<a href="{:U('Feedback/index')}">
+							<i class="iconfont">&#xe617;</i> 我要反馈
+							<span class="label label-success">NEW</span>
+						</a>
+					</li>
+					<li>
+						<a href="{:U('clear')}">
+							<i class="iconfont">&#xe619;</i> 注销登录
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="offcanvas-bg"></div>
+
+		<div class="nav-top">
+			<div class="row">
+				<div class="col-xs-2 user-head">
+					<span class="offcanvas-toggle" data-toggle="offcanvas" data-target="#nav-offcanvas" style="background-image: url(img/bg.jpg);"></span>
+				</div>
+				<div class="col-xs-8 select-week">
+					<select>
+						<option>第1周</option>
+					</select>
+				</div>
+				<div class="col-xs-2 go-weeklist">
+					<a href="userdaily.html">
+						<i class="iconfont">&#xe601;</i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="calendar-top">
+			<div class="month">3</div>
+			<ul class="week">
+				<li>
+					<a href="">
+						<span>M</span>
+						<p>13</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>T</span>
+						<p>14</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>W</span>
+						<p>15</p>
+					</a>
+				</li>
+				<li class="today">
+					<a href="">
+						<span>T</span>
+						<p>16</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>F</span>
+						<p>17</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>S</span>
+						<p>18</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>S</span>
+						<p>19</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="course-table usercourse-table">
+			<ul class="lesson">
+				<li>
+					<div class="lesson-serial">
+						<span>1</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>2</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>3</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>4</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>5</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>6</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>7</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>7+</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>8</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>9</span>
+					</div>
+				</li>
+			</ul>
+			
+			<ul class="usertag done">
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="usertag done">
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="usertag done">
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="usertag">
+				<li></li>
+				<li></li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="usertag">
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="usertag">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+			</ul>
+			<ul class="usertag">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+
+
+		<button class="btn btn-block btn-newcourse">
+			<i class="iconfont">&#xe6bd;</i> 增加新的课程
+		</button>
+
+		<div class="week-select" style="display: none;">
+			<div class="panel">
+				<div class="panel-heading">
+					<span class="close-chiosepanel">X 我放弃选择</span>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>1</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>2</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>3</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>4</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>5</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>6</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>7</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>8</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>9</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>10</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>11</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>12</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>13</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>14</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>15</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>16</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>17</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>18</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>19</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>20</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>21</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>22</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>23</span>周
+							</label>
+						</div>
+						<div class="col-xs-4">
+							<label>
+								<input type="checkbox" name="weekcheck" class="weekcheck"> 第<span>24</span>周
+							</label>
+						</div>
+					</div>
+					<div class="select-set">
+						<div class="btn-group btn-group-justified">
+							<div class="btn-group">
+								<button class="btn btn-default allweek">选择所有</button>
+							</div>
+							<div class="btn-group">
+								<button class="btn btn-default noneweek">取消所有</button>
+							</div>
+							<div class="btn-group">
+								<button class="btn btn-default singleweek">选择单周</button>
+							</div>
+							<div class="btn-group">
+								<button class="btn btn-default doubleweek">选择双周</button>
+							</div>
+						</div>
+					</div>
+					<br/>
+					<button class="btn btn-block btn-default required-week">确认选择</button>
+				</div>
+			</div>
+			<div class="bg"></div>
+		</div>
+
+		<div class="course-add" style="display: none;">
+			<div class="panel">
+				<div class="panel-heading">
+					<span class="close-addpanel">X 我放弃添加</span>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="col-xs-2 control-label">课程</label>
+							<div class="col-xs-10">
+								<input type="text" class="form-control" placeholder="请输入课程名字">
+							</div>
+						</div>
+						<hr>
+						<div class="form-group">
+							<label class="col-xs-2 control-label">节次</label>
+							<div class="col-xs-10 lesson">
+								<select class="form-control" style="width:90px;">
+									<option value="0">请选择</option>
+									<option value="1">第1节</option>
+									<option value="2">第2节</option>
+									<option value="3">第3节</option>
+									<option value="4">第4节</option>
+									<option value="5">第5节</option>
+									<option value="6">第6节</option>
+									<option value="7">第7节</option>
+									<option value="7.5">第7+节</option>
+									<option value="8">第8节</option>
+									<option value="9">第9节</option>
+								</select>
+								到
+								<select class="form-control" style="width:90px;">
+									<option value="0">请选择</option>
+									<option value="1">第1节</option>
+									<option value="2">第2节</option>
+									<option value="3">第3节</option>
+									<option value="4">第4节</option>
+									<option value="5">第5节</option>
+									<option value="6">第6节</option>
+									<option value="7">第7节</option>
+									<option value="7.5">第7+节</option>
+									<option value="8">第8节</option>
+									<option value="9">第9节</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-2 control-label">周数</label>
+							<div class="col-xs-10">
+								<span class="btn btn-block btn-default chiose-week">请选择周数</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-xs-2 control-label">地点</label>
+							<div class="col-xs-10 campus-addr">
+								<select class="form-control">
+									<option value="">请选择校区</option>
+								</select>
+								<select class="form-control">
+									<option value="">请选择建筑</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-xs-2 control-label">课室</label>
+							<div class="col-xs-10">
+								<input type="text" class="form-control" placeholder="请输入所在课室房号/名称">
+							</div>
+						</div>
+						<button class="btn btn-block submit-add">添加这门课程</button>
+					</form>
+				</div>
+			</div>
+			<div class="bg"></div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="offcanvas/bootstrap.offcanvas.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//$(".course-table tr td").height($(".course-table tr td").width());
+				$(".course-table ul li").height($(".course-table ul li").width());
+				$(".btn-newcourse").click(function(){
+					$(".course-add").removeAttr("style");
+				});
+				$(".close-addpanel").click(function(){
+					$(".course-add").attr("style","display:none;");
+				});
+
+				$(".course-box .media .edit").click(function(){
+					$(".course-edit").removeAttr("style");
+				});
+				$(".close-editpanel").click(function(){
+					$(".course-edit").attr("style","display:none;");
+				});
+
+
+				$(".chiose-week").click(function(){
+					$(".week-select").removeAttr("style");
+				});
+				$(".close-chiosepanel").click(function(){
+					$(".week-select").attr("style","display:none;");
+				});
+
+				$(".week-select").on("click","label",function(e){
+					if($(this).find("input[type='checkbox']").is(':checked')){
+						$(this).find("input[type='checkbox']").attr("checked","checked");
+						$(this).find("input[type='checkbox']").prop("checked", true);
+					}else{
+						$(this).find("input[type='checkbox']").prop("checked", false);
+						$(this).find("input[type='checkbox']").removeAttr("checked");
+					}
+				});
+
+				$(".select-set").on("click",".allweek",function(e){
+					$("input[name='weekcheck']").attr("checked","checked");
+					$("input[name='weekcheck']").prop("checked", true);
+				});
+				$(".select-set").on("click",".noneweek",function(e){
+					$("input[name='weekcheck']").prop("checked", false);
+					$("input[name='weekcheck']").removeAttr("checked");
+				});
+				$(".select-set").on("click",".singleweek",function(e){
+					$(".week-select .panel .panel-body .row .col-xs-4 label span").each(function(){
+						if($(this).text()%2 != 0){
+							$(this).prev().attr("checked","checked");
+							$(this).prev().prop("checked", true);
+						}else{
+							$(this).prev().prop("checked", false);
+							$(this).prev().removeAttr("checked");
+						}
+					});
+				});
+				$(".select-set").on("click",".doubleweek",function(e){
+					$(".week-select .panel .panel-body .row .col-xs-4 label span").each(function(){
+						if($(this).text()%2 == 0){
+							$(this).prev().attr("checked","checked");
+							$(this).prev().prop("checked", true);
+						}else{
+							$(this).prev().prop("checked", false);
+							$(this).prev().removeAttr("checked");
+						}
+					});
+				});
+
+				$(".week-select").on("click",".required-week",function(e){
+					var weeklength = $(".week-select .panel .panel-body .row .col-xs-4 label input[name='weekcheck']").parent().parent().length;
+					var checkedlength = $(".week-select .panel .panel-body .row .col-xs-4 label input[name='weekcheck']:checked").parent().parent().length;
+
+					$(".week-select").attr("style","display:none;");
+					
+					console.log(checkedlength);
+					if(checkedlength == 0){
+						$(".chiose-week").text("请选择周数");
+					}else if(checkedlength == weeklength){
+						$(".chiose-week").text("已选整个学期");
+					}else if(checkedlength == weeklength/2){
+						$(".week-select .panel .panel-body .row .col-xs-4 label input[name='weekcheck']:checked").each(function(){
+							if($(this).parent().find("span").text()%2 != 0){
+								$(".chiose-week").text("已选整个学期的单周");
+							}else if($(this).parent().find("span").text()%2 == 0){
+								$(".chiose-week").text("已选整个学期的双周");
+							}
+						});
+					}else{
+						$(".chiose-week").text("已选");
+						$(".week-select .panel .panel-body .row .col-xs-4 label input[name='weekcheck']:checked").each(function(){
+							$(".chiose-week").append($(this).parent().find("span").text() +"/");
+						});
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

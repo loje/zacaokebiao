@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>杂草课表</title>
+
+		<!-- Bootstrap -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link href="offcanvas/bootstrap.offcanvas.min.css" rel="stylesheet">
+
+		<link href="css/main.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-offcanvas" id="nav-offcanvas">
+			<div class="container-fluid">
+				<div class="meida user-sider">
+					<div class="media-left">
+						<div class="img" style="background-image: url(img/bg.jpg);"></div>
+					</div>
+					<div class="media-body">
+						<h5>鼠婆子</h5>
+						<p>281颗种子</p>
+					</div>
+				</div>
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="{:U('Shop/shoporder')}">
+							<i class="iconfont">&#xe609;</i> 以往订单
+						</a>
+					</li>
+					<li>
+						<a href="{:U('Shop/shop')}">
+							<i class="iconfont">&#xe604;</i> 黑店首页
+						</a>
+					</li>
+					<li role="separator" class="divider"></li>
+					<li>
+						<a href="{:U('SignUp/index?id='.$fuli['id'])}">
+							<i class="iconfont">&#xe61b;</i> 福利日
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<i class="iconfont">&#xe60a;</i> 课程表
+							<span class="label label-success">NEW</span>
+						</a>
+					</li>
+					<li role="separator" class="divider"></li>
+					<li>
+						<a href="{:U('Feedback/index')}">
+							<i class="iconfont">&#xe617;</i> 我要反馈
+							<span class="label label-success">NEW</span>
+						</a>
+					</li>
+					<li>
+						<a href="{:U('clear')}">
+							<i class="iconfont">&#xe619;</i> 注销登录
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="offcanvas-bg"></div>
+
+		<div class="nav-top">
+			<div class="row">
+				<div class="col-xs-2 user-head">
+					<span class="offcanvas-toggle" data-toggle="offcanvas" data-target="#nav-offcanvas" style="background-image: url(img/bg.jpg);"></span>
+				</div>
+				<div class="col-xs-8 select-week">
+					<select>
+						<option>第1周</option>
+					</select>
+				</div>
+				<div class="col-xs-2 go-weeklist">
+					<a href="daily.html">
+						<i class="iconfont">&#xe601;</i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="calendar-top">
+			<div class="month">3</div>
+			<ul class="week">
+				<li>
+					<a href="">
+						<span>M</span>
+						<p>13</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>T</span>
+						<p>14</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>W</span>
+						<p>15</p>
+					</a>
+				</li>
+				<li class="today">
+					<a href="">
+						<span>T</span>
+						<p>16</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>F</span>
+						<p>17</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>S</span>
+						<p>18</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>S</span>
+						<p>19</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="course-table">
+			<ul class="lesson">
+				<li>
+					<div class="lesson-serial">
+						<span>1</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>2</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>3</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>4</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>5</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>6</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>7</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>7+</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>8</span>
+					</div>
+				</li>
+				<li>
+					<div class="lesson-serial">
+						<span>9</span>
+					</div>
+				</li>
+			</ul>
+			
+			<ul class="tag done">
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="tag done">
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="tag done">
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="tag">
+				<li></li>
+				<li></li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="tag">
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="tag">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+				<li>
+					<span>
+						<i class="iconfont">&#xe602;</i>
+					</span>
+				</li>
+			</ul>
+			<ul class="tag">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="offcanvas/bootstrap.offcanvas.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".course-table ul li").height($(".course-table ul li").width());
+			})
+		</script>
+	</body>
+</html>

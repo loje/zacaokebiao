@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>杂草课表</title>
+
+		<!-- Bootstrap -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link href="offcanvas/bootstrap.offcanvas.min.css" rel="stylesheet">
+
+		<link href="css/main.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-offcanvas" id="nav-offcanvas">
+			<div class="container-fluid">
+				<div class="meida user-sider">
+					<div class="media-left">
+						<div class="img" style="background-image: url(img/bg.jpg);"></div>
+					</div>
+					<div class="media-body">
+						<h5>鼠婆子</h5>
+						<p>281颗种子</p>
+					</div>
+				</div>
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="{:U('Shop/shoporder')}">
+							<i class="iconfont">&#xe609;</i> 以往订单
+						</a>
+					</li>
+					<li>
+						<a href="{:U('Shop/shop')}">
+							<i class="iconfont">&#xe604;</i> 黑店首页
+						</a>
+					</li>
+					<li role="separator" class="divider"></li>
+					<li>
+						<a href="{:U('SignUp/index?id='.$fuli['id'])}">
+							<i class="iconfont">&#xe61b;</i> 福利日
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<i class="iconfont">&#xe60a;</i> 课程表
+							<span class="label label-success">NEW</span>
+						</a>
+					</li>
+					<li>
+						<a href="user_record.html">
+							<i class="iconfont">&#xe60a;</i> 课程记录
+							<span class="label label-success">NEW</span>
+						</a>
+					</li>
+					<li role="separator" class="divider"></li>
+					<li>
+						<a href="{:U('Feedback/index')}">
+							<i class="iconfont">&#xe617;</i> 我要反馈
+							<span class="label label-success">NEW</span>
+						</a>
+					</li>
+					<li>
+						<a href="{:U('clear')}">
+							<i class="iconfont">&#xe619;</i> 注销登录
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="offcanvas-bg"></div>
+
+		<div class="nav-top">
+			<div class="row">
+				<div class="col-xs-2 user-head">
+					<span class="offcanvas-toggle" data-toggle="offcanvas" data-target="#nav-offcanvas" style="background-image: url(img/bg.jpg);"></span>
+				</div>
+				<div class="col-xs-10 record-number">
+					共0条记录
+				</div>
+			</div>
+		</div>
+
+		<!-- 没有操作记录时 -->
+		<div class="none-table" style="display: none;">
+			<div class="none-td">
+				<i class="iconfont">&#xe600;</i>
+				<p>暂时没有操作记录</p>
+			</div>
+		</div>
+
+		<!-- 操作记录列表 -->
+		<div class="record-list">
+			<div class="panel record-panel">
+				<div class="panel-heading">
+					<span>撤销此操作</span>
+					<p>2016.03.28 20:30</p>
+				</div>
+				<div class="panel-body">
+					<h5>新增了<span>【电器工程】</span>课程</h5>
+					<p>位置：第5周-周三（2016.04.12）</p>
+				</div>
+			</div>
+			<div class="panel record-panel">
+				<div class="panel-heading">
+					<span>撤销此操作</span>
+					<p>2016.03.28 20:30</p>
+				</div>
+				<div class="panel-body">
+					<h5>新增了<span>【电器工程】</span>课程</h5>
+					<p>位置：第5周-周三（2016.04.12）</p>
+				</div>
+			</div>
+		</div>
+
+		<p class="more-record">
+			<a>加载更多</a>
+		</p>
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="offcanvas/bootstrap.offcanvas.min.js"></script>
+	</body>
+</html>

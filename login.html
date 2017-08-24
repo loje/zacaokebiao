@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>杂草课表</title>
+
+		<!-- Bootstrap -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link href="css/main.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="calendar-top">
+			<div class="month">3</div>
+			<ul class="week">
+				<li>
+					<span>M</span>
+					<p>13</p>
+				</li>
+				<li>
+					<span>T</span>
+					<p>14</p>
+				</li>
+				<li>
+					<span>W</span>
+					<p>15</p>
+				</li>
+				<li class="today">
+					<span>T</span>
+					<p>16</p>
+				</li>
+				<li>
+					<span>F</span>
+					<p>17</p>
+				</li>
+				<li>
+					<span>S</span>
+					<p>18</p>
+				</li>
+				<li>
+					<span>S</span>
+					<p>19</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="login-form">
+			<div class="form-td">
+				<div class="course-user">
+					<span class="userhead" style="background-image: url(img/bg.jpg);"></span>
+					<p>鼠婆子,你好</p>
+				</div>
+
+				<!-- 没有拉取到学号的时候 -->
+				<div class="login-tips" style="display: none;">
+					系统没有检测到你在哪所学院<br/>请先完善你的校园信息
+				</div>
+
+				<!-- 拉取到学号但没有学号对应课表的时候 -->
+				<div class="login-tips">
+					系统暂未收录你的课表
+				</div>
+
+				<!-- 没有拉取到学号的时候 -->
+				<div class="login-box" style="display: none;">
+					<select class="form-control">
+						<option value="0">请选择你的学校</option>
+						<!-- <option value="1">深大</option> -->
+						<option value="2">深职院</option>
+						<!-- <option value="3">深信息</option> -->
+					</select>
+					<input type="text" name="" class="form-control" value="" placeholder="请输入你的学号" />
+
+					<button class="btn btn-default">查看你们班的课程</button>
+				</div>
+
+				<!-- 拉取到学号但没有学号对应课表的时候 -->
+				<div class="login-box">
+					<button class="btn btn-default">自行创建课表</button>
+				</div>
+			</div>
+		</div>
+
+		<p class="bottom-zacao">2015-2016 © 杂草课表</p>
+		<div class="course-bg" style="background-image: url(img/bg.jpg);">
+			<div class="bg"></div>
+		</div>
+
+		
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

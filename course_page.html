@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>杂草课表</title>
+
+		<!-- Bootstrap -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+
+		<link href="css/main.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="nav-top">
+			<a href="daily.html" class="back">
+				<i class="iconfont">&#xe603;</i> 杂草课表|课程详情
+			</a>
+		</div>
+		<div class="course-top">
+			<h5>电子线路板（PCB）设计A</h5>
+			<span class="label">1-5，7-17周开课</span>
+		</div>
+		<div class="course-info">
+			<p><i class="iconfont">&#xe605;</i> [东校区]应用软件4（信息楼506）</p>
+			<p><i class="iconfont">&#xe607;</i> 星期三 第2节</p>
+			<p><i class="iconfont">&#xe606;</i> 孙德刚</p>
+		</div>
+
+		<div class="panel comments-panel">
+			<div class="panel-heading">
+				<h5>这门课的评价</h5>
+				<div class="comments-icons">
+					<span class="agree">
+						<i class="iconfont">&#xe60b;</i> 35
+					</span>
+					<span class="disagree">
+						<i class="iconfont">&#xe608;</i> 3
+					</span>
+				</div>
+			</div>
+			<div class="panel-body">
+
+				<!-- 没有评价时 -->
+				<div class="panel-none">
+					<i class="iconfont">&#xe600;</i>
+					<p>快来消灭零评价</p>
+				</div>
+
+				<!-- 评价列表 -->
+				<div class="comments-box" style="display: none;">
+					<div class="media">
+						<span class="face agree">
+							<i class="iconfont">&#xe60b;</i>
+						</span>
+						<div class="media-left">
+							<span style="background-image: url(img/bg.jpg);"></span>
+						</div>
+						<div class="media-body">
+							<h5>鼠婆子</h5>
+							<p>30分钟前</p>
+						</div>
+					</div>
+					<article>
+						故事真的很感人，音乐优美内容充实主题明确引人入胜！
+					</article>
+				</div>
+				<div class="comments-box" style="display: none;">
+					<div class="media">
+						<span class="face disagree">
+							<i class="iconfont">&#xe608;</i>
+						</span>
+						<div class="media-left">
+							<span style="background-image: url(img/bg.jpg);"></span>
+						</div>
+						<div class="media-body">
+							<h5>鼠婆子</h5>
+							<p>30分钟前</p>
+						</div>
+					</div>
+					<article>
+						故事真的很感人，音乐优美内容充实主题明确引人入胜！
+					</article>
+				</div>
+			</div>
+		</div>
+
+		<div class="comments-btn">
+			<button class="btn btn-block btn-default">评价这门课程</button>
+		</div>
+		<div class="comments-textbox" style="display: none;">
+			<div class="panel">
+				<div class="panel-heading">
+					<span class="close-textbox">X 我放弃评价</span>
+				</div>
+				<div class="panel-body">
+					<div class="row face-btn">
+						<div class="col-xs-6">
+							<button class="btn btn-agree">
+								<i class="iconfont">&#xe60b;</i> <span>赞一赞</span>
+							</button>
+						</div>
+						<div class="col-xs-6">
+							<button class="btn btn-disagree">
+								<span>踩一踩</span> <i class="iconfont">&#xe608;</i>
+							</button>
+						</div>
+					</div>
+					<textarea class="form-control" rows="5"></textarea>
+					<button class="btn btn-block submit-comments">评价这门课程</button>
+				</div>
+			</div>
+			<div class="bg"></div>
+		</div>
+		
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".comments-btn").click(function(){
+					$(".comments-textbox").removeAttr("style");
+				});
+				$(".close-textbox").click(function(){
+					$(".comments-textbox").attr("style","display:none;");
+				});
+
+				$(".btn-agree").click(function(){
+					$(this).addClass("agreed");
+					$(this).find("span").text("已赞");
+					$(".btn-disagree").removeClass("disagreed");
+					$(".btn-disagree").find("span").text("踩一踩");
+				});
+				$(".btn-disagree").click(function(){
+					$(this).addClass("disagreed");
+					$(this).find("span").text("已踩");
+					$(".btn-agree").removeClass("agreed");
+					$(".btn-agree").find("span").text("赞一赞");
+				});
+			})
+		</script>
+	</body>
+</html>
